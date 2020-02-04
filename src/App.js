@@ -1,6 +1,30 @@
-import React from 'react';
+import React from "react";
+import HomePage from "./components/HomePage";
+import AboutPage from "./components/AboutPage";
+import Header from "./common/Header";
+import CoursesPage from "./components/CoursesPage";
+
+function App() {
+  function getPage() {
+    const route = window.location.pathname;
+    if (route === "/courses") return <CoursesPage />;
+    if (route === "/about") return <AboutPage />;
+    return <HomePage />;
+  }
+  return (
+    <div className="container-fluid">
+      <Header />
+      {getPage()}
+    </div>
+  );
+}
+
+export default App;
+
+/*import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ExampleComponent from "./owncomponent/ExampleComponent.js"
 
 function App() {
   return (
@@ -17,6 +41,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React UI
+          <ExampleComponent/>
         </a>
       </header>
     </div>
@@ -24,3 +49,4 @@ function App() {
 }
 
 export default App;
+*/
