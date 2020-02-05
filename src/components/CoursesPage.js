@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getCourses } from "../api/courseApi"
+import { getCourses } from '../api/courseApi';
 
 class CoursesPage extends Component {
 
